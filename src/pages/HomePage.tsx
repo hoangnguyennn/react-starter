@@ -1,16 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
-import '../assets/styles/pages/home-page.scss'
+import '~/assets/styles/pages/home-page.scss'
 
-import BxButton from '../components/common/BxButton'
+import BxButton from '~/components/common/BxButton'
 import {
   getIsLoading,
   getLanguage,
   setIsLoading,
   setLanguage
-} from '../store/reducers/app.reducer'
-import ConvertUtil from '../utils/convert.util'
+} from '~/store/reducers/app.reducer'
+import ConvertUtil from '~/utils/convert.util'
 
 const HomePage = () => {
   const { t } = useTranslation()

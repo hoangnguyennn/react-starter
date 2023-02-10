@@ -1,5 +1,5 @@
 import { createSlice, createSelector } from '@reduxjs/toolkit'
-import i18n from '../../locales'
+import i18n from '~/locales'
 
 const initialState: Store.IAppState = {
   isLoading: false,

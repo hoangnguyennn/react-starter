@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { API_BASE_URL } from '../constants'
-import store from '../store'
-import { getToken } from '../store/reducers/auth.reducer'
+import { API_BASE_URL } from '~/constants'
+import store from '~/store'
+import { getToken } from '~/store/reducers/auth.reducer'
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL
