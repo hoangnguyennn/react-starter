@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
 import '~/assets/styles/pages/home-page.scss'
@@ -8,13 +8,15 @@ import {
   getIsLoading,
   getLanguage,
   setIsLoading,
-  setLanguage
+  setLanguage,
+  showSnackbar
 } from '~/store/reducers/app.reducer'
 import ConvertUtil from '~/utils/convert.util'
+import { useAppDispatch } from '~/hooks/useAppDispatch'
 
 const HomePage = () => {
   const { t } = useTranslation()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const isLoading = useSelector(getIsLoading())
   const language = useSelector(getLanguage())
 
@@ -32,6 +34,14 @@ const HomePage = () => {
     }
   }
 
+  const onShowSnackbar = () => {
+    dispatch(showSnackbar('123'))
+  }
+
+  const onShowSnackbarWithTitle = () => {
+    dispatch(showSnackbar({ message: '123', title: 'title 123' }))
+  }
+
   return (
     <div>
       <h2>HomePage</h2>
@@ -40,6 +50,10 @@ const HomePage = () => {
       <BxButton>{language}</BxButton>
       <BxButton onClick={changeLanguage}>Change language</BxButton>
       <p>{ConvertUtil.toVND(100000)}</p>
+      <BxButton onClick={onShowSnackbar}>Show snackbar</BxButton>
+      <BxButton onClick={onShowSnackbarWithTitle}>
+        Show snackbar with title
+      </BxButton>
     </div>
   )
 }
