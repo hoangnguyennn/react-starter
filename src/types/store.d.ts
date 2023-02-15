@@ -2,6 +2,7 @@ declare namespace Store {
   export interface IAppState {
     isLoading: boolean
     language: string
+    snackbars: Types.ISnackbar[]
   }
 
   export interface IAuthState {

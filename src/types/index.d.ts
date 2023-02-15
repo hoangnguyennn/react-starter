@@ -6,4 +6,13 @@ declare namespace Types {
   export interface Object<T = any> {
     [key: string]: T
   }
+
+  export interface ISnackbarOption {
+    message: string
+    title?: string
+  }
+
+  export interface ISnackbar extends ISnackbarOption {
+    id: string
+  }
 }

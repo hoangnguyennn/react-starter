@@ -11,11 +11,13 @@ import './locales'
 
 import router from './router'
 import store from './store'
+import BxSnackbarList from './components/common/BxSnackbarList'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={router} />
+      <BxSnackbarList />
     </Provider>
   </React.StrictMode>
 )
