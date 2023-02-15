@@ -1,9 +1,9 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
-import { API_BASE_URL } from '~/constants'
-import store from '~/store'
-import { showSnackbar } from '~/store/reducers/app.reducer'
-import { getToken } from '~/store/reducers/auth.reducer'
-import ApiUtil from '~/utils/api.util'
+import { API_BASE_URL } from '@hn/constants'
+import store from '@hn/store'
+import { showSnackbar } from '@hn/store/reducers/app.reducer'
+import { getToken } from '@hn/store/reducers/auth.reducer'
+import ApiUtil from '@hn/utils/api.util'
 import { BAD_REQUEST_MESSAGE, OFFLINE_MESSAGE } from './apiErrors'
 
 const apiClient = axios.create({

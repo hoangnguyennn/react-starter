@@ -1,18 +1,18 @@
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
-import '~/assets/styles/pages/home-page.scss'
+import '@hn/assets/styles/pages/home-page.scss'
 
-import BxButton from '~/components/common/BxButton'
+import BxButton from '@hn/components/common/BxButton'
 import {
   getIsLoading,
   getLanguage,
   setIsLoading,
   setLanguage,
   showSnackbar
-} from '~/store/reducers/app.reducer'
-import ConvertUtil from '~/utils/convert.util'
-import { useAppDispatch } from '~/hooks/useAppDispatch'
+} from '@hn/store/reducers/app.reducer'
+import ConvertUtil from '@hn/utils/convert.util'
+import { useAppDispatch } from '@hn/hooks/useAppDispatch'
 
 const HomePage = () => {
   const { t } = useTranslation()

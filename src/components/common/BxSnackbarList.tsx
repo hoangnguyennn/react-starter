@@ -3,7 +3,7 @@ import ToastContainer from 'react-bootstrap/ToastContainer'
 import Toast from 'react-bootstrap/Toast'
 import { FC, useEffect, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { getSnackbars } from '~/store/reducers/app.reducer'
+import { getSnackbars } from '@hn/store/reducers/app.reducer'
 
 const BxSnackbar: FC<Types.ISnackbar> = props => {
   const [show, setShow] = useState(true)

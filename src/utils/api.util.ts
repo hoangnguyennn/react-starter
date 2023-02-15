@@ -1,4 +1,4 @@
-import { API_ERROR_REASON_MESSAGE } from '~/apis/apiErrors'
+import { API_ERROR_REASON_MESSAGE } from '@hn/apis/apiErrors'
 
 export default class ApiUtil {
   public static getErrorMessage(reason: string, fallbackMessage: string) {

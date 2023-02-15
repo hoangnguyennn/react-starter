@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { FC, PropsWithChildren, useMemo } from 'react'
 import Button, { ButtonProps } from 'react-bootstrap/Button'
-import { usePropsChange } from '~/hooks/usePropsChange'
+import { usePropsChange } from '@hn/hooks/usePropsChange'
 
 export interface BxButtonProps extends ButtonProps {
   rounded?: boolean
