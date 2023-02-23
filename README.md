@@ -21,3 +21,14 @@ $ pnpm lint # show eslint errors
 
 $ pnpm lint:fix # fix eslint errors
 ```
+
+### Features
+
+- Routing
+- Layouts, pages and components
+- Redux store
+- Axios
+- Multi languages
+- Custom hooks
+- TypeScript
+- SCSS
