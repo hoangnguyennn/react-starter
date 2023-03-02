@@ -14,6 +14,7 @@ const BxSnackbar: FC<Types.ISnackbar> = props => {
     }, 5000)
 
     return () => {
+      console.log('clear timeout')
       clearTimeout(timer)
     }
   }, [])

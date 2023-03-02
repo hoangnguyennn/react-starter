@@ -13,6 +13,7 @@ import {
 } from '@hn/store/reducers/app.reducer'
 import ConvertUtil from '@hn/utils/convert.util'
 import { useAppDispatch } from '@hn/hooks/useAppDispatch'
+import exampleImage from '@hn/assets/images/example.png'
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -54,6 +55,9 @@ const HomePage = () => {
       <BxButton onClick={onShowSnackbarWithTitle}>
         Show snackbar with title
       </BxButton>
+      <div>
+        <img src={exampleImage} alt="" />
+      </div>
     </div>
   )
 }
