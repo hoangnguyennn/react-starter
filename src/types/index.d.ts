@@ -3,6 +3,8 @@
 declare namespace Types {
   export type Nullable<T> = T | null
 
+  export type Optional<T> = T | undefined
+
   export interface Object<T = any> {
     [key: string]: T
   }
@@ -14,5 +16,9 @@ declare namespace Types {
 
   export interface ISnackbar extends ISnackbarOption {
     id: string
+  }
+
+  export interface Callback<T> {
+    (event: T): any
   }
 }
