@@ -1,5 +1,4 @@
 import { createSlice, createSelector } from '@reduxjs/toolkit'
-import i18n from '@hn/locales'
 import GenerateUtil from '@hn/utils/generate.util'
 
 const initialState: Store.IAppState = {
@@ -17,7 +16,6 @@ const appSlice = createSlice({
     },
     setLanguage(state, action: Store.IAction<string>) {
       state.language = action.payload
-      i18n.changeLanguage(action.payload)
     },
     showSnackbar(state, action: Store.IAction<Types.ISnackbarOption | string>) {
       if (typeof action.payload === 'object') {

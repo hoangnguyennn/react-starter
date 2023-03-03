@@ -16,7 +16,7 @@ import { useAppDispatch } from '@hn/hooks/useAppDispatch'
 import exampleImage from '@hn/assets/images/example.png'
 
 const HomePage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const dispatch = useAppDispatch()
   const isLoading = useSelector(getIsLoading())
   const language = useSelector(getLanguage())
@@ -29,8 +29,10 @@ const HomePage = () => {
 
   const changeLanguage = () => {
     if (language === 'en') {
+      i18n.changeLanguage('vi')
       dispatch(setLanguage('vi'))
     } else {
+      i18n.changeLanguage('en')
       dispatch(setLanguage('en'))
     }
   }
