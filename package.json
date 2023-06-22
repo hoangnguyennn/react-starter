@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src/**/*.tsx",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "yarn lint --fix",
     "prepare": "husky install"
   },
@@ -32,6 +32,7 @@
     "uuid": "9.0.0"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.1.1",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",

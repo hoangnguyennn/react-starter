@@ -5,5 +5,8 @@
   "arrowParens": "avoid",
   "trailingComma": "none",
   "semi": false,
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "importOrder": ["^\\w", "^@hn/(.*)", "^\\./", "^\\.\\./"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
