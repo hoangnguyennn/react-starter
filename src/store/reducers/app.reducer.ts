@@ -35,7 +35,7 @@ const appSlice = createSlice({
     },
     hideSnackbar(state, action: Store.IAction<string>) {
       state.snackbars = state.snackbars.filter(snackbar => {
-        return snackbar.id === action.payload
+        return snackbar.id !== action.payload
       })
     }
   }

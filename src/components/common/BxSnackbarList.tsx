@@ -5,10 +5,13 @@ import { FC, useCallback, useEffect, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { getSnackbars, hideSnackbar } from '@hn/store/reducers/app.reducer'
 import { useAppDispatch } from '@hn/hooks/useAppDispatch'
+import { usePropsChange } from '@hn/hooks/usePropsChange'
 
 type BxSnackbarType = Types.ISnackbar & { onHide?: (id: string) => void }
 
 const BxSnackbar: FC<BxSnackbarType> = props => {
+  usePropsChange(props)
+
   const [show, setShow] = useState(true)
 
   const hide = useCallback(() => {
