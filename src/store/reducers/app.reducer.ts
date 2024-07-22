@@ -1,4 +1,5 @@
-import { createSlice, createSelector } from '@reduxjs/toolkit'
+import { createSelector, createSlice } from '@reduxjs/toolkit'
+
 import GenerateUtil from '@hn/utils/generate.util'
 
 const initialState: Store.IAppState = {

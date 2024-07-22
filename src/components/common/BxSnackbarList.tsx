@@ -1,11 +1,12 @@
-import { createPortal } from 'react-dom'
-import ToastContainer from 'react-bootstrap/ToastContainer'
-import Toast from 'react-bootstrap/Toast'
 import { FC, useCallback, useEffect, useMemo, useState } from 'react'
+import Toast from 'react-bootstrap/Toast'
+import ToastContainer from 'react-bootstrap/ToastContainer'
+import { createPortal } from 'react-dom'
 import { useSelector } from 'react-redux'
-import { getSnackbars, hideSnackbar } from '@hn/store/reducers/app.reducer'
+
 import { useAppDispatch } from '@hn/hooks/useAppDispatch'
 import { usePropsChange } from '@hn/hooks/usePropsChange'
+import { getSnackbars, hideSnackbar } from '@hn/store/reducers/app.reducer'
 
 type BxSnackbarType = Types.ISnackbar & { onHide?: (id: string) => void }
 

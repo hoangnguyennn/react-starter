@@ -1,18 +1,15 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import { RouterProvider } from 'react-router-dom'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-
 import '@hn/assets/styles/main.scss'
-
+import BxSnackbarList from '@hn/components/common/BxSnackbarList'
 import '@hn/locales'
-
 import router from '@hn/router'
 import store, { persistor } from '@hn/store'
-import BxSnackbarList from '@hn/components/common/BxSnackbarList'
 
 ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(
   <React.StrictMode>

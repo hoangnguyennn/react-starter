@@ -221,10 +221,6 @@ packages:
     resolution: {integrity: sha512-FyoJTsj/PEUWu1/TYRiXTIHc8lbw+TDYkZuoE43opPS5TrI7MyONBE1oNvfguEXAD9yhQRrVBnXdXzSLQl9XnA==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-hoist-variables@7.22.5':
-    resolution: {integrity: sha512-wGjk9QZVzvknA6yKIUURb8zY3grXCcOZt+/7Wcy8O2uctxhplmUPkOdlgoNhmdVee2c92JXbf1xpMtVNbfoxRw==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/helper-hoist-variables@7.24.7':
     resolution: {integrity: sha512-MJJwhkoGy5c4ehfoRyrJ/owKeMl19U54h27YYftT0o2teQ3FJ3nQUf/I3LlJsX4l3qlw7WRXUmiyajvHXoTubQ==}
     engines: {node: '>=6.9.0'}
@@ -4572,7 +4568,7 @@ snapshots:
 
   '@babel/generator@7.17.7':
     dependencies:
-      '@babel/types': 7.22.5
+      '@babel/types': 7.24.9
       jsesc: 2.5.2
       source-map: 0.5.7
 
@@ -4642,10 +4638,6 @@ snapshots:
   '@babel/helper-function-name@7.24.7':
     dependencies:
       '@babel/template': 7.24.7
-      '@babel/types': 7.24.9
-
-  '@babel/helper-hoist-variables@7.22.5':
-    dependencies:
       '@babel/types': 7.24.9
 
   '@babel/helper-hoist-variables@7.24.7':
@@ -5382,11 +5374,11 @@ snapshots:
       '@babel/generator': 7.24.10
       '@babel/helper-environment-visitor': 7.24.7
       '@babel/helper-function-name': 7.24.7
-      '@babel/helper-hoist-variables': 7.22.5
+      '@babel/helper-hoist-variables': 7.24.7
       '@babel/helper-split-export-declaration': 7.24.7
       '@babel/parser': 7.24.8
       '@babel/types': 7.24.9
-      debug: 4.3.4
+      debug: 4.3.5
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -5408,7 +5400,7 @@ snapshots:
 
   '@babel/types@7.17.0':
     dependencies:
-      '@babel/helper-validator-identifier': 7.22.5
+      '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
   '@babel/types@7.22.5':
@@ -6070,7 +6062,7 @@ snapshots:
   '@trivago/prettier-plugin-sort-imports@4.3.0(prettier@3.3.3)':
     dependencies:
       '@babel/generator': 7.17.7
-      '@babel/parser': 7.22.5
+      '@babel/parser': 7.24.8
       '@babel/traverse': 7.23.2
       '@babel/types': 7.17.0
       javascript-natural-sort: 0.7.1

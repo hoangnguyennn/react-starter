@@ -1,9 +1,10 @@
-import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 
+import exampleImage from '@hn/assets/images/example.png'
 import '@hn/assets/styles/pages/home-page.scss'
-
 import BxButton from '@hn/components/common/BxButton'
+import { useAppDispatch } from '@hn/hooks/useAppDispatch'
 import {
   getIsLoading,
   getLanguage,
@@ -12,8 +13,6 @@ import {
   showSnackbar
 } from '@hn/store/reducers/app.reducer'
 import ConvertUtil from '@hn/utils/convert.util'
-import { useAppDispatch } from '@hn/hooks/useAppDispatch'
-import exampleImage from '@hn/assets/images/example.png'
 
 const HomePage = () => {
   const { t, i18n } = useTranslation()
