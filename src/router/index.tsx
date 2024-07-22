@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouteObject } from 'react-router-dom'
 
-import HomePage from '@hn/pages/HomePage'
-import ExamplePage from '@hn/pages/ExamplePage'
+import HomePage from '@hn/pages/home'
+import ExamplePage from '@hn/pages/example'
 import DefaultLayout from '@hn/layouts/DefaultLayout'
 import BlankLayout from '@hn/layouts/BlankLayout'
 
