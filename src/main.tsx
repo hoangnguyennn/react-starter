@@ -6,13 +6,13 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import './assets/styles/main.scss'
+import '@hn/assets/styles/main.scss'
 
-import './locales'
+import '@hn/locales'
 
-import router from './router'
-import store, { persistor } from './store'
-import BxSnackbarList from './components/common/BxSnackbarList'
+import router from '@hn/router'
+import store, { persistor } from '@hn/store'
+import BxSnackbarList from '@hn/components/common/BxSnackbarList'
 
 ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(
   <React.StrictMode>
