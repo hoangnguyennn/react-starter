@@ -4,7 +4,7 @@ import { API_BASE_URL } from '@hn/constants'
 import store from '@hn/store'
 import { showSnackbar } from '@hn/store/reducers/app.reducer'
 import { getToken } from '@hn/store/reducers/auth.reducer'
-import ApiUtil from '@hn/utils/api.util'
+import ApiUtil from '@hn/utils/api'
 
 import { BAD_REQUEST_MESSAGE, OFFLINE_MESSAGE } from './apiErrors'
 

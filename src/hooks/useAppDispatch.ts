@@ -1,7 +1,12 @@
 import { useDispatch } from 'react-redux'
 
-import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit'
+import { Action, ThunkDispatch } from '@reduxjs/toolkit'
 
-export const useAppDispatch = () => {
-  return useDispatch<ThunkDispatch<Store.IRootState, null, AnyAction>>()
+/** useDispatch với kiểu dữ liệu rõ ràng hơn */
+export const useAppDispatch = (): ThunkDispatch<
+  Store.IRootState,
+  null,
+  Action
+> => {
+  return useDispatch()
 }

@@ -1,5 +1,11 @@
 import { useEffect, useRef } from 'react'
 
+/**
+ * Một custom hook để kiểm tra các prop thay đổi không mong muốn. Chỉ nên sử dụng nó trong lúc phát triển
+ *
+ * @param props Tất cả props
+ * @param prefix Tiền tố hiển thị thông báo
+ */
 export const usePropsChange = (
   props: Types.Object = {},
   prefix = 'Props changed'

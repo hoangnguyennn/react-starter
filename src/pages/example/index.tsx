@@ -11,7 +11,7 @@ const ExamplePage = () => {
     console.log('handle dbl click', event)
   }, [])
 
-  const handler = useHandleClick(handleClick, handleDblClick)
+  const handler = useHandleClick({ handleClick, handleDblClick })
   return (
     <div>
       ExamplePage

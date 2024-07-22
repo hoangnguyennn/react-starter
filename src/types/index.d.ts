@@ -18,7 +18,7 @@ declare namespace Types {
     id: string
   }
 
-  export interface Callback<T> {
-    (event: T): any
+  export interface Callback<T, R = any> {
+    (event: T): R
   }
 }

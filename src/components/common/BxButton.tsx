@@ -12,7 +12,7 @@ const BxButton: FC<PropsWithChildren<BxButtonProps>> = props => {
   const { children, rounded = false, className, ...buttonProps } = props
 
   const buttonClassNames = useMemo(() => {
-    const result: Types.Object = { 'btn-rounded': rounded }
+    const result: Types.Object<boolean> = { 'btn-rounded': rounded }
 
     if (className) {
       result[className] = true

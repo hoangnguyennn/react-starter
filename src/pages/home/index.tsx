@@ -12,7 +12,7 @@ import {
   setLanguage,
   showSnackbar
 } from '@hn/store/reducers/app.reducer'
-import ConvertUtil from '@hn/utils/convert.util'
+import ConvertUtil from '@hn/utils/convert'
 
 const HomePage = () => {
   const { t, i18n } = useTranslation()
