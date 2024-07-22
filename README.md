@@ -30,5 +30,7 @@ $ pnpm lint:fix # fix eslint errors
 - Axios
 - Multi languages
 - Custom hooks
+- Storybook
+- Unit test
 - TypeScript
 - SCSS
