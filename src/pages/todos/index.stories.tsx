@@ -1,13 +1,8 @@
-import { RouterProvider, createMemoryRouter } from 'react-router-dom'
-
 import { Meta, StoryObj } from '@storybook/react'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-import { routes } from '@hn/router'
+import { getTodoListHandlerFactory } from '@hn/mocks/todo/getList/mock'
 
 import Component from '.'
-
-const queryClient = new QueryClient()
 
 const meta: Meta<typeof Component> = {
   component: Component
@@ -19,14 +14,17 @@ type Story = StoryObj<typeof Component>
 
 export const FirstStory: Story = {
   render: () => {
-    const router = createMemoryRouter(routes, {
-      initialEntries: ['/todos']
-    })
+    return <Component />
+  }
+}
 
-    return (
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>
-    )
+export const Loading: Story = {
+  render: () => {
+    return <Component />
+  },
+  parameters: {
+    msw: {
+      handlers: [getTodoListHandlerFactory.loading()]
+    }
   }
 }

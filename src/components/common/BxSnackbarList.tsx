@@ -21,12 +21,9 @@ const BxSnackbar: FC<BxSnackbarType> = props => {
   }, [props])
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      hide()
-    }, 5000)
+    const timer = setTimeout(hide, 5000)
 
     return () => {
-      console.log('clear timeout')
       clearTimeout(timer)
     }
   }, [hide])

@@ -7,14 +7,7 @@
   "semi": false,
   "endOfLine": "lf",
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": [
-    "^\\w",
-    "^@(?!hn/).*(.*)",
-    "^@hn/(.*)",
-    "^\\.",
-    "^\\./",
-    "^\\.\\./"
-  ],
+  "importOrder": ["^\\w", "^@(?!hn/).*(.*)", "^@hn/(.*)", "^\\.", "^\\./", "^\\.\\./"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "importOrderGroupNamespaceSpecifiers": true
