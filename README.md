@@ -31,6 +31,6 @@ $ pnpm lint:fix # fix eslint errors
 - Multi languages
 - Custom hooks
 - Storybook
-- Unit test
+- Unit test (includes mock API test)
 - TypeScript
 - SCSS
