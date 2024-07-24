@@ -3,12 +3,7 @@ import { HttpResponse, RequestHandler, delay, http } from 'msw'
 
 import { API_BASE_URL } from '@hn/constants'
 
-type HandlerType =
-  | 'success'
-  | 'loading'
-  | 'notFound'
-  | 'invalidArgument'
-  | 'internal'
+type HandlerType = 'success' | 'loading' | 'notFound' | 'invalidArgument' | 'internal'
 
 /** Argument của createMockHandlerFactory */
 type Args<T> = {
@@ -29,10 +24,7 @@ const createApiPath = (endpoint: string) => {
 }
 
 /** Tạo ra Error Resolver cho mock response */
-const makeErrorResolver = <T extends object>(
-  statusCode: HttpStatusCode,
-  response?: T
-) => {
+const makeErrorResolver = <T extends object>(statusCode: HttpStatusCode, response?: T) => {
   return () => HttpResponse.json(response, { status: statusCode })
 }
 
@@ -55,14 +47,8 @@ export const createMockHandlerFactory = <T extends object>({
         return HttpResponse.json(successResponse, { status: 200 })
       })
     },
-    notFound: () =>
-      http[method](apiPath, makeErrorResolver(HttpStatusCode.NotFound)),
-    invalidArgument: () =>
-      http[method](apiPath, makeErrorResolver(HttpStatusCode.BadRequest)),
-    internal: () =>
-      http[method](
-        apiPath,
-        makeErrorResolver(HttpStatusCode.InternalServerError)
-      )
+    notFound: () => http[method](apiPath, makeErrorResolver(HttpStatusCode.NotFound)),
+    invalidArgument: () => http[method](apiPath, makeErrorResolver(HttpStatusCode.BadRequest)),
+    internal: () => http[method](apiPath, makeErrorResolver(HttpStatusCode.InternalServerError))
   }
 }

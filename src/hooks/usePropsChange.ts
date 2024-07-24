@@ -6,10 +6,7 @@ import { useEffect, useRef } from 'react'
  * @param props Tất cả props
  * @param prefix Tiền tố hiển thị thông báo
  */
-export const usePropsChange = (
-  props: Types.Object = {},
-  prefix = 'Props changed'
-) => {
+export const usePropsChange = (props: Types.Object = {}, prefix = 'Props changed') => {
   const ref = useRef<Types.Object | null>(null)
 
   useEffect(() => {

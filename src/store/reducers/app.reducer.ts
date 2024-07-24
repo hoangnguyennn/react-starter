@@ -43,8 +43,7 @@ const appSlice = createSlice({
 })
 
 // action
-export const { setIsLoading, setLanguage, showSnackbar, hideSnackbar } =
-  appSlice.actions
+export const { setIsLoading, setLanguage, showSnackbar, hideSnackbar } = appSlice.actions
 
 // selector
 const appState = (state: Store.IRootState) => state.app

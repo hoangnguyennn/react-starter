@@ -53,9 +53,7 @@ const HomePage = () => {
       <BxButton onClick={changeLanguage}>Change language</BxButton>
       <p>{ConvertUtil.toVND(100000)}</p>
       <BxButton onClick={onShowSnackbar}>Show snackbar</BxButton>
-      <BxButton onClick={onShowSnackbarWithTitle}>
-        Show snackbar with title
-      </BxButton>
+      <BxButton onClick={onShowSnackbarWithTitle}>Show snackbar with title</BxButton>
       <div>
         <img src={exampleImage} alt="" />
       </div>

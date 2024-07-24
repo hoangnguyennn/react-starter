@@ -16,10 +16,7 @@ type ReturnType<T> = Types.Callback<T, void>
  *
  * @returns Một handler chung cho việc click chuột
  */
-export const useHandleClick = <T>({
-  handleClick,
-  handleDblClick
-}: Args<T>): ReturnType<T> => {
+export const useHandleClick = <T>({ handleClick, handleDblClick }: Args<T>): ReturnType<T> => {
   const [clickTimes, setClickTimes] = useState(0)
   const [event, setEvent] = useState<Types.Optional<T>>(undefined)
 

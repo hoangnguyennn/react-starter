@@ -19,14 +19,13 @@ const mockData: GetTodoListResponse = [
   }
 ]
 
-export const getTodoListHandlerFactory: ReturnType<
-  typeof createMockHandlerFactory
-> = createMockHandlerFactory({
-  apiPath: '/todos',
-  successResponse: mockData,
-  method: 'get'
-})
+export const getTodoListHandlerFactory: ReturnType<typeof createMockHandlerFactory> =
+  createMockHandlerFactory({
+    apiPath: '/todos',
+    successResponse: mockData,
+    method: 'get'
+  })
 
-export const getTodoListHandlers: HttpHandler[] = [
-  getTodoListHandlerFactory.success()
-].filter((argument): argument is HttpHandler => argument !== undefined)
+export const getTodoListHandlers: HttpHandler[] = [getTodoListHandlerFactory.success()].filter(
+  (argument): argument is HttpHandler => argument !== undefined
+)

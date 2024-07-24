@@ -29,12 +29,7 @@ const BxSnackbar: FC<BxSnackbarType> = props => {
   }, [hide])
 
   return (
-    <Toast
-      style={{ marginBottom: '12px' }}
-      show={show}
-      bg="success"
-      onClose={hide}
-    >
+    <Toast style={{ marginBottom: '12px' }} show={show} bg="success" onClose={hide}>
       {props.title && (
         <Toast.Header>
           <span className="me-auto">{props.title}</span>
@@ -63,10 +58,7 @@ const BxSnackbarList = () => {
     )
   }, [snackbars])
 
-  return createPortal(
-    TheSnackbar,
-    document.querySelector('#modal') as HTMLDivElement
-  )
+  return createPortal(TheSnackbar, document.querySelector('#modal') as HTMLDivElement)
 }
 
 export default BxSnackbarList
