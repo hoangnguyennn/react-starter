@@ -4,8 +4,9 @@ import BlankLayout from '@hn/layouts/BlankLayout'
 import DefaultLayout from '@hn/layouts/DefaultLayout'
 import ExamplePage from '@hn/pages/example'
 import HomePage from '@hn/pages/home'
+import TodosPage from '@hn/pages/todos'
 
-const routes: RouteObject[] = [
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: (
@@ -19,6 +20,14 @@ const routes: RouteObject[] = [
     element: (
       <BlankLayout>
         <ExamplePage />
+      </BlankLayout>
+    )
+  },
+  {
+    path: '/todos',
+    element: (
+      <BlankLayout>
+        <TodosPage />
       </BlankLayout>
     )
   }
