@@ -5,20 +5,17 @@ import { createPortal } from 'react-dom'
 import { useSelector } from 'react-redux'
 
 import { useAppDispatch } from '@hn/hooks/useAppDispatch'
-import { usePropsChange } from '@hn/hooks/usePropsChange'
 import { getSnackbars, hideSnackbar } from '@hn/store/reducers/app.reducer'
 
 type BxSnackbarType = Types.ISnackbar & { onHide?: (id: string) => void }
 
-const BxSnackbar: FC<BxSnackbarType> = props => {
-  usePropsChange(props)
-
+const BxSnackbar: FC<BxSnackbarType> = ({ id, title, message, onHide }) => {
   const [show, setShow] = useState(true)
 
   const hide = useCallback(() => {
     setShow(false)
-    props.onHide && props.onHide(props.id)
-  }, [props])
+    onHide?.(id)
+  }, [id, onHide])
 
   useEffect(() => {
     const timer = setTimeout(hide, 5000)
@@ -30,12 +27,12 @@ const BxSnackbar: FC<BxSnackbarType> = props => {
 
   return (
     <Toast style={{ marginBottom: '12px' }} show={show} bg="success" onClose={hide}>
-      {props.title && (
+      {title ? (
         <Toast.Header>
-          <span className="me-auto">{props.title}</span>
+          <span className="me-auto">{title}</span>
         </Toast.Header>
-      )}
-      <Toast.Body className="text-white">{props.message}</Toast.Body>
+      ) : null}
+      <Toast.Body className="text-white">{message}</Toast.Body>
     </Toast>
   )
 }

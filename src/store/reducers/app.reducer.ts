@@ -47,7 +47,7 @@ export const { setIsLoading, setLanguage, showSnackbar, hideSnackbar } = appSlic
 
 // selector
 const appState = (state: Store.IRootState) => state.app
-const _createSelector = <T>(combiner: { (state: Store.IAppState): T }) => {
+const _createSelector = <T>(combiner: (state: Store.IAppState) => T) => {
   return createSelector(appState, combiner)
 }
 

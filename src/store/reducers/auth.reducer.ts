@@ -17,7 +17,7 @@ const authSlice = createSlice({
 export const { setToken } = authSlice.actions
 
 const authState = (state: Store.IRootState) => state.auth
-const _createSelector = <T>(combiner: { (state: Store.IAuthState): T }) => {
+const _createSelector = <T>(combiner: (state: Store.IAuthState) => T) => {
   return createSelector(authState, combiner)
 }
 

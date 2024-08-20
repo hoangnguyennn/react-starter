@@ -14,7 +14,7 @@ const ExamplePage = () => {
   const handler = useHandleClick({ handleClick, handleDblClick })
   return (
     <div>
-      ExamplePage
+      <div>ExamplePage</div>
       <button onClick={handler}>Click me</button>
     </div>
   )
