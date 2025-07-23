@@ -1,4 +1,4 @@
-import '@hn/assets/styles/main.scss'
+import '@hn/assets/styles/main.css'
 import '@hn/locales'
 import router from '@hn/router'
 import store, { persistor } from '@hn/store'
