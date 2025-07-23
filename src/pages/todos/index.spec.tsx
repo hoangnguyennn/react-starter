@@ -1,9 +1,6 @@
-import { describe, expect, it } from 'vitest'
-
-import { composeStories } from '@storybook/react'
-
 import { customRender } from '@hn/test/customRender'
-
+import { composeStories } from '@storybook/react'
+import { describe, expect, it } from 'vitest'
 import * as stories from './index.stories'
 
 describe('TodosPage', () => {

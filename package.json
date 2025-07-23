@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "prettier --check \"src/**/*.{ts,tsx}\" && eslint src --ext .ts,.tsx",
     "lint:fix": "prettier --write \"src/**/*.{ts,tsx}\" && eslint src --ext .ts,.tsx --fix",
+    "typecheck": "tsc --noEmit",
     "test": "vitest",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
@@ -73,7 +74,7 @@
     "storybook": "8.6.14",
     "typescript": "5.8.3",
     "vite": "6.0.0",
-    "vitest": "3.2.4"
+    "vitest": "4.0.0-beta.4"
   },
   "eslintConfig": {
     "extends": [

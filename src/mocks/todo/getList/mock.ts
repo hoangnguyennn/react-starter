@@ -1,7 +1,5 @@
-import { HttpHandler } from 'msw'
-
 import { createMockHandlerFactory } from '@hn/mocks/utils/createMockHandlerFactory'
-
+import { HttpHandler } from 'msw'
 import { GetTodoListResponse } from '../../../repositories/todo/getList/types'
 
 const mockData: GetTodoListResponse = [

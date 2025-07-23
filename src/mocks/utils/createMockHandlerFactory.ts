@@ -1,7 +1,6 @@
+import { API_BASE_URL } from '@hn/constants'
 import { HttpStatusCode } from 'axios'
 import { HttpResponse, RequestHandler, delay, http } from 'msw'
-
-import { API_BASE_URL } from '@hn/constants'
 
 type HandlerType = 'success' | 'loading' | 'notFound' | 'invalidArgument' | 'internal'
 

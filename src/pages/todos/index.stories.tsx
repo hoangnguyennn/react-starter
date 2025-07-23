@@ -1,7 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react'
-
 import { getTodoListHandlerFactory } from '@hn/mocks/todo/getList/mock'
-
+import { Meta, StoryObj } from '@storybook/react'
 import Component from '.'
 
 const meta: Meta<typeof Component> = {

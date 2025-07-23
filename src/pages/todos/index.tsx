@@ -1,6 +1,5 @@
-import { useQuery } from '@tanstack/react-query'
-
 import { getTodoList } from '@hn/repositories/todo/getList'
+import { useQuery } from '@tanstack/react-query'
 
 /** Màn hình danh sách todo */
 const TodosPage = () => {

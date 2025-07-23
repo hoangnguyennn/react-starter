@@ -1,11 +1,7 @@
+import '@hn/assets/styles/main.scss'
+import type { Preview } from '@storybook/react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { initialize, mswLoader } from 'msw-storybook-addon'
-import React from 'react'
-
-import type { Preview } from '@storybook/react'
-
-import '@hn/assets/styles/main.scss'
-
 import { handlers } from '../test/msw/handlers'
 import { GlobalProvider } from '../test/provider'
 
