@@ -2,6 +2,7 @@ import BlankLayout from '@hn/layouts/BlankLayout'
 import DefaultLayout from '@hn/layouts/DefaultLayout'
 import ExamplePage from '@hn/pages/example'
 import HomePage from '@hn/pages/home'
+import PageBuilderPage from '@hn/pages/page-builder'
 import TodosPage from '@hn/pages/todos'
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
@@ -29,6 +30,10 @@ export const routes: RouteObject[] = [
         <TodosPage />
       </BlankLayout>
     )
+  },
+  {
+    path: '/page-builder',
+    element: <PageBuilderPage />
   }
 ]
 

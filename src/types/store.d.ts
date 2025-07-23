@@ -12,6 +12,7 @@ declare namespace Store {
   export interface IRootState {
     app: IAppState
     auth: IAuthState
+    pageBuilder: PageBuilder.IPageBuilderState
   }
 
   export interface IAction<T> {
