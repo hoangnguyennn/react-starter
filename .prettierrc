@@ -1,4 +1,5 @@
 {
+  "plugins": ["prettier-plugin-organize-imports"],
   "singleQuote": true,
   "useTabs": false,
   "tabWidth": 2,
@@ -6,10 +7,5 @@
   "arrowParens": "avoid",
   "trailingComma": "none",
   "semi": false,
-  "endOfLine": "lf",
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": ["^\\w", "^@(?!hn/).*(.*)", "^@hn/(.*)", "^\\.", "^\\./", "^\\.\\./"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
-  "importOrderGroupNamespaceSpecifiers": true
+  "endOfLine": "lf"
 }
