@@ -1,5 +1,4 @@
 import exampleImage from '@hn/assets/images/example.png'
-import '@hn/assets/styles/pages/home-page.scss'
 
 const HomePage = () => {
   return (

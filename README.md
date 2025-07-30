@@ -24,13 +24,11 @@ $ pnpm lint:fix # fix eslint errors
 
 ### Features
 
-- Routing
-- Layouts, pages and components
-- Redux store
-- Axios
-- Multi languages
-- Custom hooks
-- Storybook
-- Unit test (includes mock API test)
+- routing
+- layouts, pages and components
+- axios
+- multi languages
+- custom hooks
+- storybook
+- unit test (includes mock API test)
 - TypeScript
-- SCSS

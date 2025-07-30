@@ -1,4 +1,3 @@
-import '@hn/assets/styles/main.scss'
 import type { Preview } from '@storybook/react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { initialize, mswLoader } from 'msw-storybook-addon'
