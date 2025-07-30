@@ -1,15 +1,23 @@
-import exampleImage from '@hn/assets/images/example.png'
-import '@hn/assets/styles/pages/home-page.scss'
+import { Canvas } from '@hn/components/home/Canvas'
+import { ElementsPanel } from '@hn/components/home/ElementsPanel'
+import { PropertiesPanel } from '@hn/components/home/PropertiesPanel'
+import { CanvasProvider } from '@hn/contexts/CanvasContext'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
-    <div>
-      <h2>HomePage</h2>
-      <div>
-        <img src={exampleImage} alt="" />
-      </div>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <CanvasProvider>
+        <div className="h-screen flex flex-col bg-gray-50">
+          {/* <TopToolbar /> */}
+          <div className="flex-1 flex overflow-hidden">
+            <ElementsPanel />
+            <Canvas />
+            <PropertiesPanel />
+          </div>
+        </div>
+      </CanvasProvider>
+    </DndProvider>
   )
 }
-
-export default HomePage
