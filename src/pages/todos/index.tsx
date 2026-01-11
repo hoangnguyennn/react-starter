@@ -1,37 +1,14 @@
-import { getTodoList } from '@hn/repositories/todo/getList'
-import { useQuery } from '@tanstack/react-query'
+import { ErrorBoundary } from '@hn/parts/common/ErrorBoundary'
+import { Suspense } from 'react'
+import { Presentation } from './presentation'
 
 /** Màn hình danh sách todo */
-const TodosPage = () => {
-  const {
-    data = [],
-    isLoading,
-    isError
-  } = useQuery({
-    queryKey: ['todos'],
-    queryFn: getTodoList
-  })
-
-  if (isLoading) return 'Loading...'
-
-  if (isError) return 'Error'
-
+export const ListTodosPage = () => {
   return (
-    <ol>
-      {data.map(todo => (
-        <li
-          key={todo.id}
-          style={{
-            color: todo.completed ? 'gray' : 'black',
-            cursor: todo.completed ? 'not-allowed' : 'default',
-            userSelect: todo.completed ? 'none' : 'auto'
-          }}
-        >
-          {todo.title}
-        </li>
-      ))}
-    </ol>
+    <ErrorBoundary renderFallback={() => null}>
+      <Suspense fallback={null}>
+        <Presentation />
+      </Suspense>
+    </ErrorBoundary>
   )
 }
-
-export default TodosPage

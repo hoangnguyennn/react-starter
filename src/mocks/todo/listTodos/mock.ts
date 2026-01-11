@@ -1,8 +1,8 @@
+import { ListTodosResponse } from '@hn/infra/repositories/todo/listTodos/types'
 import { createMockHandlerFactory } from '@hn/mocks/utils/createMockHandlerFactory'
 import { HttpHandler } from 'msw'
-import { GetTodoListResponse } from '../../../repositories/todo/getList/types'
 
-const mockData: GetTodoListResponse = [
+const mockData: ListTodosResponse = [
   {
     userId: 1,
     id: 1,

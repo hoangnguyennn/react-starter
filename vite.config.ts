@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      '@hn/interactors': path.resolve(__dirname, './src/domains/interactors'),
+      '@hn/models': path.resolve(__dirname, './src/domains/models'),
+      '@hn/repositories': path.resolve(__dirname, './src/infra/repositories'),
       '@hn/test': path.resolve(__dirname, './test'),
       '@hn': path.resolve(__dirname, './src')
     }
