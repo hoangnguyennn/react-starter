@@ -1,8 +1,8 @@
 import { ListTodosPage } from '@hn/pages/todos'
 import DefaultLayout from '@hn/parts/layouts/DefaultLayout'
-import { RouteObject } from 'react-router-dom'
+import { RouteObject } from 'react-router'
 
-export const TodoListRouteObject: RouteObject = {
+export const todoListRouteObject: RouteObject = {
   path: '/todos',
   element: (
     <DefaultLayout>

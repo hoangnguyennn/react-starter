@@ -1,6 +1,6 @@
-import HomePage from '@hn/pages/home'
+import { HomePage } from '@hn/pages/home'
 import DefaultLayout from '@hn/parts/layouts/DefaultLayout'
-import { RouteObject } from 'react-router-dom'
+import { RouteObject } from 'react-router'
 
 export const homeRouteObject: RouteObject = {
   path: '/',
