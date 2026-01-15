@@ -1,5 +1,8 @@
+import { isUnauthenticatedError } from '@hn/utils/isUnauthenticatedError'
 import { useQueryErrorResetBoundary } from '@tanstack/react-query'
 import { Component, FC, PropsWithChildren, ReactNode, useCallback } from 'react'
+
+const isUnavailableError = (error: unknown) => isUnauthenticatedError(error)
 
 type Props = PropsWithChildren<{
   onRetry?: () => void
@@ -15,6 +18,7 @@ type Props = PropsWithChildren<{
 }>
 
 type State = {
+  /** Lỗi bắt được từ component con */
   error: unknown
 }
 
@@ -28,14 +32,26 @@ class ErrorBoundaryBase extends Component<Props, State> {
     return { error }
   }
 
-  render() {
-    const { children } = this.props
+  handleRetry(): void {
+    this.setState({ error: null })
+    this.props.onRetry?.()
+  }
 
-    if (!this.state.error) {
+  render() {
+    const { error } = this.state
+    const { children, renderFallback } = this.props
+
+    if (!error) {
       return children
     }
 
-    return
+    // Một số loại lỗi sẽ không thể bắt được trên UI mà sẽ đẩy ra ngoài
+    if (isUnavailableError(error)) {
+      throw error
+    }
+
+    const Component = renderFallback
+    return <Component error={error} retry={this.handleRetry} />
   }
 }
 

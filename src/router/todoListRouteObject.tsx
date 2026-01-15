@@ -1,5 +1,5 @@
-import DefaultLayout from '@hn/layouts/DefaultLayout'
 import { ListTodosPage } from '@hn/pages/todos'
+import DefaultLayout from '@hn/parts/layouts/DefaultLayout'
 import { RouteObject } from 'react-router-dom'
 
 export const TodoListRouteObject: RouteObject = {

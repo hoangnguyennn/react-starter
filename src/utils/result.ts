@@ -8,7 +8,7 @@ type ERR = typeof ERR
 export type Ok<T> = {
   /** @private */
   _type: OK
-  /** @deprecated sử dụng `unwrapOk` thay thế */
+  /** @deprecated Sử dụng `unwrapOk` thay thế */
   _value: T
 }
 
@@ -16,7 +16,7 @@ export type Ok<T> = {
 export type Err<T extends Error> = {
   /** @private */
   _type: ERR
-  /** @deprecated sử dụng `unwrapErr` thay thế */
+  /** @deprecated Sử dụng `unwrapErr` thay thế */
   _error: T
 }
 

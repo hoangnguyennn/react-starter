@@ -1,13 +1,14 @@
 import { useEffect, useRef } from 'react'
 
 /**
- * Một custom hook để kiểm tra các prop thay đổi không mong muốn. Chỉ nên sử dụng nó trong lúc phát triển
+ * Một custom hook để kiểm tra các prop thay đổi không mong muốn. Chỉ nên sử dụng nó trong lúc phát
+ * triển
  *
  * @param props Tất cả props
  * @param prefix Tiền tố hiển thị thông báo
  */
-export const usePropsChange = (props: Types.Object = {}, prefix = 'Props changed') => {
-  const ref = useRef<Types.Object | null>(null)
+export const usePropsChange = (props: Record<string, unknown> = {}, prefix = 'Props changed') => {
+  const ref = useRef<Record<string, unknown> | null>(null)
 
   useEffect(() => {
     if (ref.current === null) {
@@ -15,7 +16,7 @@ export const usePropsChange = (props: Types.Object = {}, prefix = 'Props changed
       return
     }
 
-    const changed: Types.Object = {}
+    const changed: Record<string, unknown> = {}
     const prev = ref.current
     Object.keys(props).forEach(key => {
       if (prev[key] !== props[key]) {

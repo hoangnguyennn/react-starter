@@ -16,7 +16,7 @@ export const createConnectTo =
         return err(error)
       }
 
-      // Unauthenticated error will be handled by ErrorBoundary
+      // Lỗi chưa đăng nhập sẽ được xử lý riêng biệt
       if (isUnauthenticatedError(error)) {
         throw new UnauthenticatedError('Unauthenticated error', { cause: error })
       }
