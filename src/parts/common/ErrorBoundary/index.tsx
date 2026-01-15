@@ -7,18 +7,19 @@ const isUnavailableError = (error: unknown) => isUnauthenticatedError(error)
 type Props = PropsWithChildren<{
   onRetry?: () => void
   /**
-   * Một react component, sẽ được hiển thị khi có lỗi xảy ra
+   * Một react component, sẽ được hiển thị khi có lỗi xảy ra.
    *
    * @param props
-   * @param props.error Lỗi đã xảy ra
+   * @param props.error Lỗi đã xảy ra.
    * @param props.retry Hàm để thử lại (gọi lại render của children)
+   *
    * @returns
    */
   renderFallback: (props: { error: unknown; retry: () => void }) => ReactNode
 }>
 
 type State = {
-  /** Lỗi bắt được từ component con */
+  /** Lỗi bắt được từ component con. */
   error: unknown
 }
 

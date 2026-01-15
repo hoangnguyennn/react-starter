@@ -6,7 +6,7 @@ import { ServerError } from '../ServerError'
 type Props = PropsWithChildren
 
 type State = {
-  /** Lỗi bắt được từ component con */
+  /** Lỗi bắt được từ component con. */
   error: unknown
 }
 

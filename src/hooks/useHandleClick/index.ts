@@ -1,19 +1,20 @@
 import { useCallback, useEffect, useState } from 'react'
 
 type Args<T> = {
-  /** Được gọi khi người dùng click chuột */
+  /** Được gọi khi người dùng click chuột. */
   handleClick?: (event?: T) => void
-  /** Được gọi khi người dùng double click chuột */
+  /** Được gọi khi người dùng double click chuột. */
   handleDblClick?: (event?: T) => void
 }
 
 type ReturnType<T> = (event?: T) => void
 
 /**
- * Một custom hook được sử dụng để khai báo handler khi click chuột
+ * Một custom hook được sử dụng để khai báo handler khi click chuột.
  *
- * @param argument Xem {@link Args} để biết thêm
- * @returns Một handler chung cho việc click chuột
+ * @param argument Xem {@link Args} để biết thêm.
+ *
+ * @returns Một handler chung cho việc click chuột.
  */
 export const useHandleClick = <T>({ handleClick, handleDblClick }: Args<T>): ReturnType<T> => {
   const [clickTimes, setClickTimes] = useState(0)

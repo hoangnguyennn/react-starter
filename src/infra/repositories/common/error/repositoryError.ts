@@ -1,21 +1,21 @@
 export type RepositoryErrorCode =
-  /** Tham số không hợp lệ */
+  /** Tham số không hợp lệ. */
   | 'INVALID_ARGUMENT'
-  /** Chưa đăng nhập */
+  /** Chưa đăng nhập. */
   | 'UNAUTHENTICATED'
-  /** Không có quyền thao tác */
+  /** Không có quyền thao tác. */
   | 'PERMISSION_DENIED'
-  /** Không thoả điều kiện tiên quyết */
+  /** Không thoả điều kiện tiên quyết. */
   | 'FAILED_PRECONDITION'
-  /** Không tìm thấy tài nguyên */
+  /** Không tìm thấy tài nguyên. */
   | 'NOT_FOUND'
-  /** Tài nguyên đã tồn tại */
+  /** Tài nguyên đã tồn tại. */
   | 'ALREADY_EXISTS'
-  /** Lỗi hệ thống */
+  /** Lỗi hệ thống. */
   | 'INTERNAL'
-  /** Dịch vụ không khả dụng */
+  /** Dịch vụ không khả dụng. */
   | 'UNAVAILABLE'
-  /** Lỗi không xác định */
+  /** Lỗi không xác định. */
   | 'UNKNOWN'
 
 export class RepositoryError extends Error {

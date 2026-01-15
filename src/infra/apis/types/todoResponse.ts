@@ -5,5 +5,5 @@ export type Todo = {
   userId: number
 }
 
-/** Response type của listTodos */
+/** Response type của listTodos. */
 export type ListTodosResponse = Todo[]

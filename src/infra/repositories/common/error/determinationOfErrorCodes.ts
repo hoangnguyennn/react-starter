@@ -3,10 +3,10 @@ import { AxiosError } from 'axios'
 import { RepositoryError } from './repositoryError'
 
 /**
- * Hàm chuyển AxiosError thành RepositoryError với mã lỗi tương ứng
+ * Hàm chuyển AxiosError thành RepositoryError với mã lỗi tương ứng.
  *
  * @todo Khi số lượng mã lỗi tăng lên, có thể sẽ phải sử dụng error code trong body để phân biệt chi
- *   tiết hơn
+ *   tiết hơn.
  */
 export const determinationOfErrorCodes = (error: AxiosError | Error): Err<RepositoryError> => {
   if (!(error instanceof AxiosError)) {

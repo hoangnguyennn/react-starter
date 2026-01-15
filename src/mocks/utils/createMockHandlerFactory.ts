@@ -4,30 +4,30 @@ import { HttpResponse, RequestHandler, delay, http } from 'msw'
 
 type HandlerType = 'success' | 'loading' | 'notFound' | 'invalidArgument' | 'internal'
 
-/** Argument của createMockHandlerFactory */
+/** Argument của createMockHandlerFactory. */
 type Args<T> = {
-  /** Endpoint của API */
+  /** Endpoint của API. */
   apiPath: string
-  /** Response cho trường hợp thành công */
+  /** Response cho trường hợp thành công. */
   successResponse: T
-  /** Phương thức được sử dụng để gọi API */
+  /** Phương thức được sử dụng để gọi API. */
   method?: keyof typeof http
 }
 
-/** ReturnType của createMockHandlerFactory */
+/** ReturnType của createMockHandlerFactory. */
 type ReturnType = Record<HandlerType, () => RequestHandler>
 
-/** Tạo ra URL từ API_BASE_URL và endpoint */
+/** Tạo ra URL từ API_BASE_URL và endpoint. */
 const createApiPath = (endpoint: string) => {
   return `${API_BASE_URL}${endpoint}`
 }
 
-/** Tạo ra Error Resolver cho mock response */
+/** Tạo ra Error Resolver cho mock response. */
 const makeErrorResolver = <T extends object>(statusCode: HttpStatusCode, response?: T) => {
   return () => HttpResponse.json(response, { status: statusCode })
 }
 
-/** Tạo ra danh sách handler cho một API */
+/** Tạo ra danh sách handler cho một API. */
 export const createMockHandlerFactory = <T extends object>({
   apiPath,
   successResponse,
