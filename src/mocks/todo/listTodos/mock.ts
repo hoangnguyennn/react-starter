@@ -1,5 +1,5 @@
-import { ListTodosResponse } from '@hn/infra/repositories/todo/listTodos/types'
 import { createMockHandlerFactory } from '@hn/mocks/utils/createMockHandlerFactory'
+import { ListTodosResponse } from '@hn/repositories/todo/listTodos/types'
 import { HttpHandler } from 'msw'
 
 const mockData: ListTodosResponse = [

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Component from '.'
+import { HomePage as Component } from '.'
 
 const meta: Meta<typeof Component> = {
   component: Component

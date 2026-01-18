@@ -1,5 +1,5 @@
-import { listTodos } from '@hn/infra/repositories/todo/listTodos'
 import { Todo } from '@hn/models/todo'
+import { listTodos } from '@hn/repositories/todo/listTodos'
 import { isErr, unwrapErr, unwrapOk } from '@hn/utils/result'
 import { useSuspenseQuery } from '@tanstack/react-query'
 

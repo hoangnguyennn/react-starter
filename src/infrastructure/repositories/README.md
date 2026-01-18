@@ -1,8 +1,8 @@
 ## Repository
 
-Thuộc lớp application.
+Thuộc lớp infra.
 
-Repository là adapter chuyển đổi dữ liệu và lỗi infra (apiClient) sang ngôn ngữ của app.
+Repository là adapter chuyển đổi HTTP response sang dạng app có thể hiểu được (che dấu HTTP context).
 
 Nó:
 

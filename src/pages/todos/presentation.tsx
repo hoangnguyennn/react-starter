@@ -1,4 +1,4 @@
-import { useListTodos } from '@hn/domains/interactors/useListTodos'
+import { useListTodos } from '@hn/interactors/useListTodos'
 
 export const Presentation = () => {
   const { todos } = useListTodos()

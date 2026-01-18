@@ -1,4 +1,4 @@
-import { todoClient } from '@hn/infra/apis/todoClient'
+import { todoClient } from '@hn/infrastructure/apis/todoClient'
 import { determinationOfErrorCodes } from '@hn/repositories/common/error/determinationOfErrorCodes'
 import { RepositoryError } from '@hn/repositories/common/error/repositoryError'
 import { createConnectTo } from '@hn/utils/createConnectTo'

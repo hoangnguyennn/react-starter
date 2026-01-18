@@ -18,9 +18,9 @@
     "baseUrl": "./",
     "paths": {
       "@hn/*": ["./src/*"],
-      "@hn/interactors/*": ["./src/domains/interactors/*"],
+      "@hn/interactors/*": ["./src/application/interactors/*"],
       "@hn/models/*": ["./src/domains/models/*"],
-      "@hn/repositories/*": ["./src/infra/repositories/*"],
+      "@hn/repositories/*": ["./src/infrastructure/repositories/*"],
       "@hn/test/*": ["./test/*"]
     }
   },
