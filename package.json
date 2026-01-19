@@ -13,7 +13,9 @@
     "test": "vitest",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "docker:build": "docker build --platform=linux/amd64 -t react-starter .",
+    "docker:run": "docker run --platform=linux/amd64 -d -p 8080:80 react-starter"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -70,6 +72,7 @@
     "vite": "6.0.0",
     "vitest": "4.0.0-beta.4"
   },
+  "packageManager": "pnpm@10.20.0",
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
